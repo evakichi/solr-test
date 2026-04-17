@@ -1,0 +1,11 @@
+services:
+  solr:
+    image: solr:latest
+    container_name: solr
+    hostname: solr
+    volumes:
+      - solr-storage:/var/solr
+    ports:
+      - 8983:8983
+volumes:
+  solr-storage:
